@@ -1,15 +1,8 @@
-let number = [2, 4, 6, 8]
-let currentIndex = 0
-function recursive(index){
-    if(index < number.length){
-        let currentNumber = number[currentIndex]
-        currentIndex++
-        return currentNumber
-    }else {
-        return null
-    }
-}
-console.log(recursive(currentIndex));
-console.log(recursive(currentIndex));
-console.log(recursive(currentIndex));
-console.log(recursive(currentIndex));
+const numbers = [1, 2, 3, 4, 5];
+let currentIndex = 0;
+
+document.getElementById('button').addEventListener('click', ()=> {
+    const numberDisplay = document.querySelector('.output');
+    numberDisplay.innerHTML = numbers[currentIndex];
+    currentIndex = (currentIndex + 1) % numbers.length; 
+});
